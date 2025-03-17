@@ -1,5 +1,5 @@
 {
-  "name": "@repo/store",
+  "name": "bank-webhook",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,11 +9,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
-    "recoil": "^0.7.7"
-  },
-  "exports":{
-    "./useBalance":"./src/hooks/useBalance.ts"
+    "@types/express": "^5.0.0",
+    "@repo/db":"*",
+    "esbuild": "^0.25.1",
+    "express": "^4.21.2"
   }
 }
