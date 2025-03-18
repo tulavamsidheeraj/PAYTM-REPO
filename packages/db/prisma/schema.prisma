@@ -13,6 +13,18 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
+enum AuthType {
+  Google
+  Github
+}
+
+enum OnRampStatus {
+  Success
+  Failure
+  Processing
+}
+
 model User {
   id                Int                 @id @default(autoincrement())
   email             String?             @unique
@@ -49,13 +61,3 @@ model Balance {
   user   User @relation(fields: [userId], references: [id])
 }
 
-enum AuthType {
-  Google
-  Github
-}
-
-enum OnRampStatus {
-  Success
-  Failure
-  Processing
-}
